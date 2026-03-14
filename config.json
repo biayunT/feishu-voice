@@ -1,0 +1,22 @@
+{
+  "name": "feishu-voice",
+  "version": "1.0.0",
+  "defaultVoice": {
+    "engine": "edge-tts",
+    "voice": "zh-CN-XiaoyiNeural",
+    "style": "young-female-butler",
+    "rate": "-3%",
+    "pitch": "+1Hz",
+    "description": "小云默认声音 - 年轻女管家风格，自然、温柔、清甜、稳重"
+  },
+  "formatConversion": {
+    "defaultFormat": "opus",
+    "defaultBitrate": "32k",
+    "command": "ffmpeg -y -i {input} -c:a libopus -b:a {bitrate} {output}"
+  },
+  "feishu": {
+    "supportedFormats": ["opus", "amr", "ogg"],
+    "recommendedFormat": "opus",
+    "unsupportedFormats": ["mp3"]
+  }
+}
